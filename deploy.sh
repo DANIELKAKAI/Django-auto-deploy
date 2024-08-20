@@ -33,6 +33,8 @@ NGINX_SYMLINK="/etc/nginx/sites-enabled/$APP_NAME.conf"
 
 SERVER_IP=$(curl -s http://checkip.amazonaws.com)
 
+sudo sed -i "s/^user .*/user $USER;/" "$NGINX_CONF"
+
 cat <<EOL | sudo tee "$NGINX_CONF" > /dev/null
 server {
     listen 80;
