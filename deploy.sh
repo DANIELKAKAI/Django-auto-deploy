@@ -27,13 +27,15 @@ pip install gunicorn
 
 sudo apt-get install nginx
 
+MAIN_NGINX_CONF="/etc/nginx/nginx.conf"
+
 NGINX_CONF="/etc/nginx/sites-available/$APP_NAME.conf"
 
 NGINX_SYMLINK="/etc/nginx/sites-enabled/$APP_NAME.conf"
 
 SERVER_IP=$(curl -s http://checkip.amazonaws.com)
 
-sudo sed -i "s/^user .*/user $USER;/" "$NGINX_CONF"
+sudo sed -i "s/^user .*/user $USER;/" "$MAIN_NGINX_CONF"
 
 cat <<EOL | sudo tee "$NGINX_CONF" > /dev/null
 server {
