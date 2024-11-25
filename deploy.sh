@@ -8,6 +8,7 @@ sudo apt-get install build-essential libffi-dev python3-dev
 sudo apt-get install libpq-dev
 sudo apt install python3-venv
 
+sudo apt install redis-server
 
 sudo apt install postgresql
 
