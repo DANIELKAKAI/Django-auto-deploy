@@ -123,5 +123,5 @@ sudo systemctl restart nginx
 sudo systemctl restart supervisor
 EOL
 
-chmod +x ~/restart.sh
+
 
