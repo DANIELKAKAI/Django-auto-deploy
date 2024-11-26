@@ -34,7 +34,7 @@ NGINX_CONF="/etc/nginx/sites-available/$APP_NAME.conf"
 
 NGINX_SYMLINK="/etc/nginx/sites-enabled/$APP_NAME.conf"
 
-RESTART_FILE="~/restart.sh"
+RESTART_FILE="/home/$USER/restart.sh"
 
 SERVER_IP=$(curl -s http://checkip.amazonaws.com)
 
